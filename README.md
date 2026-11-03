@@ -54,5 +54,12 @@ Zero Content Retention: specgit never keeps a copy of your documents or comments
 narrow exceptions listed at [specgit.com/privacy](https://specgit.com/privacy). What
 Cursor reads through specgit is processed by Cursor under your agreement with it.
 
+## Learn more
+
+- [Try the editor, no sign-up](https://specgit.com/try)
+- [How specgit works](https://specgit.com/how-it-works)
+- [Obsidian for teams: collaborate on a vault in GitHub](https://specgit.com/obsidian-github-collaboration)
+- [Introducing Canvas: Obsidian boards in specgit](https://specgit.com/blog/introducing-canvas)
+- [Why product specs go stale and how to fix it](https://specgit.com/blog/why-product-specs-go-stale)
 - Docs: [specgit.com/developers](https://specgit.com/developers)
-- Support: support@specgit.com
+- Support: [specgit.com/support](https://specgit.com/support)
