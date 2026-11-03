@@ -1,0 +1,14 @@
+{
+  "name": "specgit",
+  "description": "Work in the docs and boards your team keeps in GitHub, live, beside the people writing them. Edit, suggest, and comment from Cursor, and publishing stays a person's click.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Fn First Holdings LLC",
+    "email": "support@specgit.com"
+  },
+  "homepage": "https://specgit.com",
+  "repository": "https://github.com/function1st/specgit-cursor-plugin",
+  "license": "MIT",
+  "keywords": ["github", "docs", "markdown", "obsidian", "canvas", "collaboration", "writing", "specs", "review"],
+  "logo": "assets/logo.png"
+}
