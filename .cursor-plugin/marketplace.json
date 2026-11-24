@@ -1,0 +1,17 @@
+{
+  "name": "specgit-mcp",
+  "owner": {
+    "name": "FnFirst",
+    "email": "support@specgit.com"
+  },
+  "metadata": {
+    "description": "Official specgit MCP connector and Cursor plugin for real-time collaborative editing on GitHub docs, Obsidian Canvas boards, and Bases."
+  },
+  "plugins": [
+    {
+      "name": "specgit",
+      "source": "cursor-plugin",
+      "description": "Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from Cursor, under the access you choose."
+    }
+  ]
+}

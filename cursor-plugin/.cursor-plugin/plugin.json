@@ -1,13 +1,13 @@
 {
   "name": "specgit",
-  "description": "Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from Cursor, and you decide what gets published.",
+  "description": "Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from Cursor, under the access you choose.",
   "version": "1.0.0",
   "author": {
-    "name": "Fn First Holdings LLC",
+    "name": "FnFirst",
     "email": "support@specgit.com"
   },
   "homepage": "https://specgit.com",
-  "repository": "https://github.com/function1st/specgit-cursor-plugin",
+  "repository": "https://github.com/fnfirst/specgit-mcp",
   "license": "MIT",
   "keywords": ["github", "docs", "markdown", "obsidian", "canvas", "collaboration", "writing", "specs", "review"],
   "logo": "assets/logo.png"

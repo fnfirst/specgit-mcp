@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.specgit/docs-agent",
+  "title": "specgit agent collaboration",
+  "description": "Read, edit, and comment on the docs your team keeps in GitHub, live.",
+  "version": "1.0.1",
+  "websiteUrl": "https://specgit.com/",
+  "repository": {
+    "url": "https://github.com/fnfirst/specgit-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://specgit.com/brand/specgit-icon-light-96.png",
+      "mimeType": "image/png",
+      "sizes": ["96x96"],
+      "theme": "light"
+    },
+    {
+      "src": "https://specgit.com/brand/specgit-icon-dark-96.png",
+      "mimeType": "image/png",
+      "sizes": ["96x96"],
+      "theme": "dark"
+    },
+    {
+      "src": "https://specgit.com/brand/specgit-icon-light-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"],
+      "theme": "light"
+    },
+    {
+      "src": "https://specgit.com/brand/specgit-icon-dark-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"],
+      "theme": "dark"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://specgit.com/api/agent"
+    }
+  ]
+}

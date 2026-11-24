@@ -1,65 +1,91 @@
-# specgit for Cursor
+# specgit MCP
 
-specgit makes GitHub a better place for your whole team to write. This plugin brings
-Cursor into the documents your team is writing, so it works in the live document with
-you, not on a copy.
+Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from your agent, under the access you choose.
 
-Ask Cursor to open a document or an Obsidian Canvas board, or to show you a picker of
-the ones you can open. The specgit editor opens in the chat, live, with your teammates
-in it. Cursor always works from the latest text, including changes your teammates haven't saved yet.
+**specgit** (by FnFirst) hosts a remote Streamable HTTP MCP server at `https://specgit.com/api/agent` (Official MCP Registry ID: `com.specgit/docs-agent`). There is nothing to build or run locally and no API keys to manage: every person signs in through OAuth 2.1 with their own GitHub account and chooses what each agent may do.
 
-## What Cursor can do
+## What the connector does
 
-- Edit a sentence, rewrite a section, or add text under a heading. Your team sees edits
-  as they happen, and you can undo any of them.
-- Suggest wording instead. Nothing changes until a person accepts it.
-- Comment on the exact words, reply to threads, and resolve them. Ask for
-  a review and it leaves comments. Ask for a triage and it answers each thread and
-  suggests the fixes.
-- Add, move, connect, and group cards on a board, and lay out lanes.
-- Start a document or board, rename one, or add an image from a web address.
-- Get a document ready to submit for review or publish, and you make the final call.
+- **Live collaborative editing:** open, read, edit, rewrite sections, and insert text in Markdown documents and Obsidian Bases (`.base` YAML files) kept in GitHub, alongside teammates editing live. Each agent edit can be undone.
+- **Suggestions:** propose wording or section rewrites that leave the document unchanged until a person accepts or rejects them in specgit. Only people accept suggestions.
+- **Comments, review, and triage:** comment on exact words, reply to pull request review threads, resolve them, run a structured review, or triage open threads with replies and suggested edits.
+- **Obsidian Canvas boards:** add, edit, move, resize, restyle, connect, and group cards and tidy lanes on `.canvas` boards live, with undo.
+- **File actions:** create and rename Markdown documents, `.canvas` boards, and `.base` files, and add images from a web address or attachment. A new document starts as a draft for review, never as the published version.
+- **Review and publish controls:** read and comment access cannot publish or submit a document for review. With edit access, the agent can propose publishing, submitting for review, or catching up in the editor card, and an edit grant can also submit for review or publish on documents you can open (GitHub's branch rules still apply). No tool deletes a file.
+
+In Claude, ChatGPT, and Cursor, the specgit editor appears right inside the conversation through MCP Apps. In other MCP clients, each result links to the document on `https://specgit.com`.
 
 ## Connect
 
-Install the plugin from the Cursor Marketplace. The first time Cursor uses specgit, it
-opens specgit in your browser:
+Every client connects to the same remote Streamable HTTP endpoint:
 
-1. Sign in with GitHub.
-2. Choose what Cursor may do: read, read and comment, or read, comment and edit.
-3. Choose how long: 30 days, 90 days, or until you remove it.
+```text
+https://specgit.com/api/agent
+```
 
-You can remove its access any time in specgit, under Settings, Connected agents.
+### Claude and Claude Code
 
-To add it without the plugin, put this in `mcp.json`:
+- **Claude web and desktop:** open **Customize**, then **Connectors**, add a custom connector pointing to `https://specgit.com/api/agent`, choose **Connect**, and sign in with GitHub.
+- **Claude Code:**
+
+```bash
+claude mcp add --transport http specgit https://specgit.com/api/agent
+```
+
+### Cursor
+
+- **One-click install:** [Add to Cursor](https://cursor.com/install-mcp?name=specgit&config=eyJ1cmwiOiJodHRwczovL3NwZWNnaXQuY29tL2FwaS9hZ2VudCJ9)
+- **Manual config (`~/.cursor/mcp.json` or `.cursor/mcp.json`):**
 
 ```json
 {
   "mcpServers": {
-    "specgit": { "url": "https://specgit.com/api/agent" }
+    "specgit": {
+      "url": "https://specgit.com/api/agent"
+    }
   }
 }
 ```
 
-## What you need
+### VS Code
 
-- A GitHub account and a specgit account.
-- Reading and commenting work in any repository you can open in specgit.
-- The live editor and edits need the repository's owner on a paid specgit plan.
-- Cursor works on Markdown documents and Canvas boards.
+- **One-click install:** [Install in VS Code](https://vscode.dev/redirect/mcp/install?name=specgit&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fspecgit.com%2Fapi%2Fagent%22%7D)
+- **Workspace config (`.vscode/mcp.json`):**
 
-## Your docs stay in GitHub
+```json
+{
+  "servers": {
+    "specgit": {
+      "type": "http",
+      "url": "https://specgit.com/api/agent"
+    }
+  }
+}
+```
 
-Zero Content Retention: specgit never keeps a copy of your documents or comments, with
-narrow exceptions listed at [specgit.com/privacy](https://specgit.com/privacy). What
-Cursor reads through specgit is processed by Cursor under your agreement with it.
+### ChatGPT
 
-## Learn more
+Turn on developer mode in ChatGPT settings, add a custom connector pointing at `https://specgit.com/api/agent` with OAuth sign-in, choose **Connect**, and sign in with GitHub.
 
-- [Try the editor, no sign-up](https://specgit.com/try)
-- [How specgit works](https://specgit.com/how-it-works)
-- [Obsidian for teams: collaborate on a vault in GitHub](https://specgit.com/obsidian-github-collaboration)
-- [Introducing Canvas: Obsidian boards in specgit](https://specgit.com/blog/introducing-canvas)
-- [Why product specs go stale and how to fix it](https://specgit.com/blog/why-product-specs-go-stale)
-- Docs: [specgit.com/developers](https://specgit.com/developers)
-- Support: [specgit.com/support](https://specgit.com/support)
+### Gemini, Grok, Windsurf, Cline, and other MCP clients
+
+Add `https://specgit.com/api/agent` as a remote Streamable HTTP MCP server. Clients that support OAuth 2.1 discovery find the authorization server automatically through `/.well-known/oauth-protected-resource/api/agent`. See [`llms-install.md`](./llms-install.md) for agent installer instructions and `https://specgit.com/auth.md` for manual OAuth steps.
+
+## Permissions, plans, and privacy
+
+- **Access scopes:** choose **Read documents** (`docs:read`), **Read and comment** (`docs:comment`), or **Read, comment and edit** (`docs:edit`), and choose how long the grant lasts (30 days, 90 days, or until you remove it). Remove any agent at any time in specgit under **Settings**, **Connected agents**, or revoke its token at `https://specgit.com/oauth/revoke`.
+- **Plans:** reading documents, reviewing, and commenting work on every plan, including Free. Editing and opening the embedded live editor require the repository owner to be on Pro or Pro Plus. Outside agents run on your host's own model and use zero specgit agent usage.
+- **Privacy:** Zero Content Retention: specgit never keeps a copy of your documents or comments, with narrow exceptions listed at `https://specgit.com/privacy`. GitHub remains the source of truth. What your connected agent reads through specgit is processed by your host's provider under your agreement with it.
+
+## Resources
+
+- Developer docs and full tool list: `https://specgit.com/developers`
+- OAuth 2.1 auth guide: `https://specgit.com/auth.md`
+- No-account sandbox: `https://specgit.com/try`
+- Security: `https://specgit.com/security`
+- Privacy policy: `https://specgit.com/privacy`
+- Support: `https://specgit.com/support` (`support@specgit.com`)
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE). This repository holds public connector metadata and setup documentation for specgit's remote MCP server; it contains no proprietary server code.
