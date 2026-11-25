@@ -1,6 +1,6 @@
 {
   "name": "specgit",
-  "description": "Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from Cursor, under the access you choose.",
+  "description": "Real-time collaborative visual editor on GitHub for Markdown docs, specs, and Obsidian vaults. Edit live in Cursor, triage inline comments, suggest changes, update Canvas boards, and publish.",
   "version": "1.0.0",
   "author": {
     "name": "FnFirst",

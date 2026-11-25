@@ -1,22 +1,24 @@
 # specgit for Cursor
 
-Work together, live, in the docs and boards your team keeps in GitHub. Edit, suggest, and comment from Cursor, under the access you choose.
+specgit is a real-time collaborative visual editor built straight on GitHub. Teams write specs, Markdown docs, Obsidian Canvas boards, and Bases visually in a browser or Obsidian without learning Git, while every save stays a commit, every inline comment stays a GitHub pull request thread, and GitHub stays the source of truth.
 
-Open the specgit editor right in the conversation: the document, who's in it, and the agent's latest change with **Undo**, or **Accept** and **Reject** for a suggested edit. Open it full screen for comments, review and the Status panel.
+Connect specgit to Cursor to join your team's live rooms directly from your editor, with the same capabilities teammates and built-in Ask Agent already have.
 
-Ask for a review or a triage. In a review, the agent comments on what it finds. In a triage, it answers each open comment and suggests the changes the comment asks for.
+## Key capabilities
 
-Work on boards: add, edit, move, connect and group cards and tidy lanes, with one **Undo** for the whole step.
+- **Embedded live editor:** Open docs and boards right inside Cursor with live teammate cursors, one-click **Undo** on direct agent edits, and full-screen access to comments, review, and the Status panel.
+- **Suggestions that wait for people:** Ask Cursor to suggest wording with **Accept** and **Reject** buttons so nothing changes until a person approves.
+- **Review and comment triage:** Run a document review that leaves inline comments on exact words, or triage open threads so Cursor replies under your GitHub name and suggests fixes.
+- **Obsidian Canvas boards, Bases, and new files:** Add, edit, move, connect, and group Canvas cards and tidy lanes with one **Undo** for the whole step, or create and rename Markdown docs, boards, and `.base` files and add images from a web address or attached file.
+- **Publishing under GitHub rules:** Read and comment access cannot submit or publish. Edit access can open the review or publish card and can also submit for review or publish on documents you can open, while GitHub branch rules always apply. No tool deletes a file.
 
-Create and rename documents, boards, and Obsidian Bases (.base) files, and add images from a web address or an attached file. A new document starts as a draft for review, never as the published version.
+## Permissions, plans, and privacy
 
-Read and comment access can't publish or send a document for review. With edit access, the agent can show the publish or review card, and an edit grant can also submit for review or publish on documents you can open (GitHub's branch rules still apply). No tool deletes a file.
+Sign in with GitHub (no API keys), choose **Read documents**, **Read and comment**, or **Read, comment and edit** and a grant duration, and remove access any time in **Connected agents**.
 
-Sign in with GitHub and choose what the agent may do (**Read documents**, **Read and comment**, or **Read, comment and edit**) and for how long. Remove it at any time in **Connected agents**.
+Reading, reviewing, and commenting work on every plan, including Free. Opening the embedded live editor and editing require the repository owner to be on a paid specgit plan. People can still edit in specgit on any plan. Connected agents run on Cursor's own model and use zero specgit agent usage.
 
-Reading a document, reviewing and commenting work on every plan, including Free. Agent edits, and the editor in the conversation, need the repository owner to be on a paid specgit plan. People can still edit in specgit on any plan. The agent runs on Cursor's own model and doesn't count toward your specgit agent usage.
-
-Zero Content Retention: specgit never keeps a copy of your documents or comments, with narrow exceptions listed at specgit.com/privacy. GitHub stays the source of truth. What Cursor reads through specgit is processed by Cursor under your agreement with it.
+**Zero Content Retention:** specgit never keeps a copy of your documents or comments, with narrow exceptions listed at [specgit.com/privacy](https://specgit.com/privacy). GitHub stays the source of truth. What Cursor reads through specgit is processed by Cursor under your agreement with it.
 
 ## Connect
 
