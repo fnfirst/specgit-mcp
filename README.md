@@ -25,7 +25,7 @@ https://specgit.com/api/agent
 
 ### Claude and Claude Code
 
-- **Claude web and desktop:** open **Customize**, then **Connectors**, add a custom connector pointing to `https://specgit.com/api/agent`, choose **Connect**, and sign in with GitHub.
+- **Claude web and desktop (one-click install):** [Add to Claude](https://claude.ai/plugins/id/plugin_01UQgcQn9KB6q2DFXiWuhMza?via=directory) (or add a custom connector pointing to `https://specgit.com/api/agent` under **Customize**, **Connectors**, then choose **Connect** and sign in with GitHub).
 - **Claude Code:**
 
 ```bash
