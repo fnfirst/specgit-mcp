@@ -26,7 +26,14 @@ https://specgit.com/api/agent
 ### Claude and Claude Code
 
 - **Claude web and desktop (one-click install):** [Add to Claude](https://claude.ai/plugins/id/plugin_01UQgcQn9KB6q2DFXiWuhMza?via=directory) (or add a custom connector pointing to `https://specgit.com/api/agent` under **Customize**, **Connectors**, then choose **Connect** and sign in with GitHub).
-- **Claude Code:**
+- **Claude Code (plugin):**
+
+```bash
+/plugin marketplace add fnfirst/specgit-mcp
+/plugin install specgit@specgit-mcp
+```
+
+- **Claude Code (CLI):**
 
 ```bash
 claude mcp add --transport http specgit https://specgit.com/api/agent

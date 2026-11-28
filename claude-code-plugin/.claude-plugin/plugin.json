@@ -1,0 +1,39 @@
+{
+  "name": "specgit",
+  "description": "Real-time collaborative visual editor on GitHub for Markdown docs, specs, and Obsidian vaults. Edit live in Claude Code, triage inline comments, suggest changes, update Canvas boards, and publish.",
+  "version": "1.0.0",
+  "author": {
+    "name": "FnFirst",
+    "email": "support@specgit.com"
+  },
+  "homepage": "https://specgit.com",
+  "repository": "https://github.com/fnfirst/specgit-mcp",
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "github-docs",
+    "documents",
+    "docs",
+    "markdown",
+    "obsidian",
+    "obsidian-canvas",
+    "obsidian-bases",
+    "canvas",
+    "collaboration",
+    "real-time",
+    "writing",
+    "specs",
+    "prd",
+    "product-specs",
+    "engineering-docs",
+    "technical-writing",
+    "documentation",
+    "docs-as-code",
+    "comments",
+    "review",
+    "triage",
+    "pull-requests",
+    "visual-editor",
+    "knowledge-base"
+  ]
+}

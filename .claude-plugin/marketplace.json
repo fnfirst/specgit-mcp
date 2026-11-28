@@ -1,0 +1,17 @@
+{
+  "name": "specgit-mcp",
+  "owner": {
+    "name": "FnFirst",
+    "email": "support@specgit.com"
+  },
+  "metadata": {
+    "description": "Official specgit MCP connector and Claude Code plugin for real-time collaborative editing on GitHub docs, Obsidian Canvas boards, and Bases."
+  },
+  "plugins": [
+    {
+      "name": "specgit",
+      "source": "./claude-code-plugin",
+      "description": "Real-time collaborative visual editor on GitHub for Markdown docs, specs, and Obsidian vaults. Edit live in Claude Code, triage inline comments, suggest changes, update Canvas boards, and publish."
+    }
+  ]
+}

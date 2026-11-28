@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "specgit": {
+      "type": "http",
+      "url": "https://specgit.com/api/agent"
+    }
+  }
+}
